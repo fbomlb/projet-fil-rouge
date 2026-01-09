@@ -7,3 +7,4 @@ services:
     environment:
       - "ODOO_URL=http://10.211.55.60:8069/"
       - "PGADMIN_URL=http://10.211.55.60:80"
+

@@ -7,7 +7,7 @@
             "Username": "odoo",
             "Password": "myodoo",
             "Port": 5432,
-            "Host":"localhost",
+            "Host":"odoo_database",
             "SSLMode":"prefer",
             "MaintenanceDB":"postgres"
         }

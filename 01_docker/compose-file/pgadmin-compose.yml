@@ -8,4 +8,4 @@ services:
     volumes:
       - ./servers.json:/pgadmin4/servers.json
     image: dpage/pgadmin4
-    container-name: pgadmin
+    container_name: pgadmin
