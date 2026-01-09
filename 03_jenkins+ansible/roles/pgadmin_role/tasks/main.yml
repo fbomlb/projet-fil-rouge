@@ -1,0 +1,16 @@
+---
+# tasks file for pgadmin_role
+- name: docker compose generate file
+  template:
+    src: "docker-compose.yml.j2"
+    dest: /home/{{ ansible_user }}/docker-compose-pgadmin.yml
+    mode: 0655
+
+- name: generate server json file
+  template:
+    src: "servers.json.j2"
+    dest: /home/{{ ansible_user }}/servers.json 
+    mode: 0655
+
+- name: deploy pgadmin
+  command: "docker compose -f /home/{{ansible_user}}/docker-compose-pgadmin.yml up -d"

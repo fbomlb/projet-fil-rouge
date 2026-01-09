@@ -1,0 +1,6 @@
+---
+# tasks file for docker_role
+- include_tasks: "docker-ubuntu.yml"
+  when: ansible_os_family == "Debian"
+- include_tasks: "docker-centos.yml"
+  when: ansible_distribution == "CentOS"

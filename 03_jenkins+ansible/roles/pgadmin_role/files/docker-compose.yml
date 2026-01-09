@@ -1,0 +1,16 @@
+name: <your project name>
+services:
+    pgadmin4:
+        ports:
+            - 443:443
+        volumes:
+            - /private/var/lib/pgadmin:/var/lib/pgadmin
+            - /path/to/certificate.cert:/certs/server.cert
+            - /path/to/certificate.key:/certs/server.key
+            - /tmp/servers.json:/pgadmin4/servers.json
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=user@domain.com
+            - PGADMIN_DEFAULT_PASSWORD=SuperSecret
+            - PGADMIN_ENABLE_TLS=True
+        image: dpage/pgadmin4
+

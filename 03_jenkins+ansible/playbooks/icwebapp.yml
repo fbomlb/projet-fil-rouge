@@ -1,0 +1,9 @@
+---
+- name: app
+  hosts: all
+  become: true
+  roles:
+    - docker_role
+    - odoo_role
+    - pgadmin_role
+    - icwebapp_role
