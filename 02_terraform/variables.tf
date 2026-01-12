@@ -18,5 +18,3 @@ variable "username" {}
 variable "region" {}
 
 variable "stack" {}
-
-

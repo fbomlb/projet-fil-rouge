@@ -13,5 +13,3 @@ resource "local_file" "local_project" {
   content         = tls_private_key.tls_key.private_key_pem
   file_permission = "0400"
 }
-
-
