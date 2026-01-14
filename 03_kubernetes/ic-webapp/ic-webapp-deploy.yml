@@ -34,5 +34,5 @@ spec:
         #     cpu: "500m"
         ports:
         - containerPort: 8080
-        imagePullSerets:
-          - name: github-regcred
+ #         imagePullSerets:
+ #           - name: github-regcred
