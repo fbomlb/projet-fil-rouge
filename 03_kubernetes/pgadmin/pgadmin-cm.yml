@@ -13,7 +13,6 @@ data:
         "1": {
             "Name": "devobs project",
             "Group": "Database group",
-            "Host": "localhost",
             "Username": "odoo",
             "Password": "myodoo",
             "Port": 5432,
