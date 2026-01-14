@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ic-webapp
+  name: ic-webapp-deploy
   labels:
     env: prod 
     app: ic-webapp
@@ -21,18 +21,18 @@ spec:
         - name: ODOO_URL 
           valueFrom: 
             configMapKeyRef:
-              key: odoo_url 
+              key: ODOO_URL 
               name: ic-webapp-cm
         - name: PGADMIN_URL 
           valueFrom:
             configMapKeyRef:
-              key: pgadmin_url 
+              key: PGADMIN_URL 
               name: ic-webapp-cm
-        # resources:
-        #   limits:
-        #     memory: "128Mi"
-        #     cpu: "500m"
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
         ports:
         - containerPort: 8080
- #         imagePullSerets:
- #           - name: github-regcred
+ #        imagePullSerets:
+ #          - name: github-regcred
