@@ -28,10 +28,10 @@ spec:
             configMapKeyRef:
               key: PGADMIN_URL 
               name: ic-webapp-cm
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8080
  #        imagePullSerets:
