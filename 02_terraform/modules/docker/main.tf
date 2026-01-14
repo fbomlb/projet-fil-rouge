@@ -20,8 +20,7 @@ resource "aws_instance" "ec2_project" {
     scripts = ["./scripts/docker.sh"]
   }
   provisioner "local-exec" {
-    command = "mkdir -p ../04_ansible/host_vars/" 
-    command = "echo -e '\nansible_host: ${self.public_ip}' >> ../04_ansible/host_vars/docker.yaml"
+    command = "mkdir -p ../04_ansible/host_vars/; echo -e '\nansible_host: ${self.public_ip}' >> ../04_ansible/host_vars/docker.yaml"
   }
 
   tags = {
