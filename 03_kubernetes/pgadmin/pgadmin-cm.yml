@@ -8,16 +8,19 @@ metadata:
     app: pgadmin
 data:
   email: toto@toto.com
-#  servers.json: |
-#    {
-#      "Servers:"
-#        "1": {
-#          "Name": "postgres-odoo"
-#          "Group": "postgres-odoo-group"
-#          "Port": "5432"
-#          "Host": "postgres-svc"
-#          "SSLMode": "prefer"
-#          "MaintenanceDB": "postgres"
-#        }
-#    } 
+  servers.json: |
+    "Servers": {
+        "1": {
+            "Name": "devobs project",
+            "Group": "Database group",
+            "Host": "localhost",
+            "Username": "odoo",
+            "Password": "myodoo",
+            "Port": 5432,
+            "Host":"postgres-svc",
+            "SSLMode":"prefer",
+            "MaintenanceDB":"postgres"
+        }
+    }
+
   
