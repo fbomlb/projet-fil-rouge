@@ -3,8 +3,9 @@ services:
     container_name: ic-webapp
     ports: 
       - 8080:8080
-    image: ic-webapp:1.0
+    #image: ulrichsteve/ic-webapp:1.0
+    image: ic-webapp:1.0  
     environment:
-      - "ODOO_URL=http://10.211.55.60:8069/"
-      - "PGADMIN_URL=http://10.211.55.60:80"
+      - "ODOO_URL=http://52.47.157.242:8069/"
+      - "PGADMIN_URL=http://52.47.157.242:80"
 

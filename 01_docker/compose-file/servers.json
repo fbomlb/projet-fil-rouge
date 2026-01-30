@@ -2,14 +2,14 @@
     "Servers": {
         "1": {
             "Name": "devobs project",
-            "Group": "Database group",
-            "Host": "localhost",
+            "Group": "database group",
+            "Port": 5432,
             "Username": "odoo",
             "Password": "myodoo",
-            "Port": 5432,
             "Host":"odoo_database",
             "SSLMode":"prefer",
             "MaintenanceDB":"postgres"
         }
     }
 }
+
