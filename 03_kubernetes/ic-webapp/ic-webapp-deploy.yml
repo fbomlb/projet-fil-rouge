@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ic-webapp-deploy
-  #labels:
-  #  env: prod 
-  #  app: ic-webapp
+  labels:
+    env: prod 
+    app: ic-webapp
 spec:
   selector:
     matchLabels:
@@ -28,10 +28,6 @@ spec:
             configMapKeyRef:
               key: PGADMIN_URL 
               name: ic-webapp-cm
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 8080
 

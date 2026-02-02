@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: odoo-deploy
-  #namespace: icgroup
   labels:
     app: odoo
     env: prod
@@ -33,11 +32,7 @@ spec:
           valueFrom:
             secretKeyRef:
               key: password 
-              name: odoo-secret 
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+              name: odoo-secret
         ports:
         - containerPort: 8069
         volumeMounts:

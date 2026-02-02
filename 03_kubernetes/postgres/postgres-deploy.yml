@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres-deploy
-  #namespace: icgroup
   labels:
     env: prod
     app: postgres
@@ -34,10 +33,6 @@ spec:
             configMapKeyRef:
               key: user 
               name: postgres-cm
-        resources:
-           limits:
-             memory: "128Mi"
-             cpu: "500m"
         ports:
         - containerPort: 5432
         volumeMounts:
