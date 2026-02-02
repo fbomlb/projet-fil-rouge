@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pgadmin-deploy
-  #namespace: icgroup
+  namespace: icgroup
   labels:
     env: prod 
     app: pgadmin
@@ -27,12 +27,12 @@ spec:
         - name: PGADMIN_DEFAULT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: pgadmin-secret
               key: password
+              name: postgres-secret
         resources:
-           limits:
-             memory: "128Mi"
-             cpu: "500m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         ports:
         - containerPort: 80
         volumeMounts: 
@@ -51,4 +51,6 @@ spec:
       - name: pgadmin-storage-data
         persistentVolumeClaim:
           claimName: pgadmin-pvc
+  
+
 

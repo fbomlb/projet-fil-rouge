@@ -2,9 +2,9 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: odoo-cm
-  labels:
-    app: odoo
-    env: prod
+#  labels:
+#    app: odoo
+#    env: prod
 data:
-  #user: odoo
+  user: odoo
   host: postgres-svc

@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ic-webapp-deploy
-  labels:
-    env: prod 
-    app: ic-webapp
+  #labels:
+  #  env: prod 
+  #  app: ic-webapp
 spec:
   selector:
     matchLabels:
@@ -34,5 +34,4 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 8080
- #        imagePullSerets:
- #          - name: github-regcred
+
