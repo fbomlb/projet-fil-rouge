@@ -6,5 +6,5 @@ metadata:
     app: odoo
     env: prod
 data:
-  user: odoo
+#  user: odoo
   host: postgres-svc

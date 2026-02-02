@@ -8,10 +8,10 @@ metadata:
     type: local
 spec:
   capacity:
-    storage: 5Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Delete
-  storageClassName: manual
+  #persistentVolumeReclaimPolicy: Delete
+  #storageClassName: manual
   hostPath:
     path: /data-pgadmin
