@@ -25,14 +25,14 @@ spec:
               name: odoo-cm
         - name: USER
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               key: user
-              name: odoo-cm
+              name: odoo-secret
         - name: PASSWORD 
           valueFrom:
             secretKeyRef:
               key: password 
-              name: odoo-secret
+              name: odoo-secret 
         ports:
         - containerPort: 8069
         volumeMounts:
