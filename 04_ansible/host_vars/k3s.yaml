@@ -1,4 +1,0 @@
--e 
-ansible_host: 35.180.132.70
--e 
-ansible_host: 35.180.156.18
