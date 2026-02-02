@@ -26,8 +26,8 @@ spec:
         - name: PGADMIN_DEFAULT_PASSWORD
           valueFrom:
             secretKeyRef:
+              name: pgadmin-secret
               key: password
-              name: postgres-secret
         ports:
         - containerPort: 80
         volumeMounts: 
