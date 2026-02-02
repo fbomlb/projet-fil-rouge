@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: postgres-cm
-  namespacee: icgroup
+  #namespacee: icgroup
   labels:
     env: prod 
     app: postgress

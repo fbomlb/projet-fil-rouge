@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres-deploy
-  namespace: icgroup
+  #namespace: icgroup
   labels:
     env: prod
     app: postgres
