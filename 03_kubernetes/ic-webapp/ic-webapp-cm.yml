@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: ic-webapp-cm
-  namespace: icgroup
+  #namespace: icgroup
   labels:
     env: prod
     app: ic-webapp
