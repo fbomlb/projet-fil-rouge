@@ -3,7 +3,7 @@
   hosts: localhost
   tasks: 
      - name: apply manifest file
-       command: "kubectl --kubeconfig=./kubeconfig-k3s.yml apply -k ~/projet-fil-rouge/03_kubernetes"
+       command: "kubectl --kubeconfig=./kubeconfig-k3s.yml apply -k ~/projet-fil-rouge/03_kubernetes --validate=false"
 
     #- name: apply manifest file
     #  command: "kubectl --kubeconfig=../kubeconfig/kubeconfig-k3s.yml delete -k ~/bootcamp-devops-projet/03_kubernetes"
