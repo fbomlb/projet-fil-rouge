@@ -8,7 +8,3 @@
     #- name: apply manifest file
     #  command: "kubectl --kubeconfig=../kubeconfig/kubeconfig-k3s.yml delete -k ~/bootcamp-devops-projet/03_kubernetes"
 
-
-
-
-
