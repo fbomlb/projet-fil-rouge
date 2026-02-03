@@ -2,6 +2,6 @@
 - name: apply or delete kubernetes manifest file 
   hosts: localhost
   tasks: 
-     - name: apply manifest file
-       command: "kubectl --kubeconfig=./playbooks/kubeconfig-k3s.yml apply -k ~/projet-fil-rouge/03_kubernetes"
+    - name: apply manifest file
+      command: "kubectl --kubeconfig=./playbooks/kubeconfig-k3s.yml apply -k ~/projet-fil-rouge/03_kubernetes"
 
