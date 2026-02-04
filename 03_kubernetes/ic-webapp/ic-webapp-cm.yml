@@ -6,5 +6,11 @@ metadata:
     env: prod
     app: ic-webapp
 data:
-  ODOO_URL: http://51.44.164.211:30010
-  PGADMIN_URL: http://51.44.164.211:30011
+  # IP utilisé pour la partie projet 03_kubernetes
+  #ODOO_URL:    http://51.44.164.211:30010
+  #PGADMIN_URL: http://51.44.164.211:30011
+
+  # IP utilisé pour la partie projet 04_ansible
+  ODOO_URL:    http://13.38.227.249:30010
+  PGADMIN_URL: http://13.38.227.249:30011
+  
