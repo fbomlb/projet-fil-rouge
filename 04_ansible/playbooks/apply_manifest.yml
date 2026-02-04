@@ -4,5 +4,5 @@
   tasks: 
     - name: apply manifest file
       #command: "kubectl --kubeconfig=./kubeconfig-k3s.yml apply -k ~/projet-fil-rouge/03_kubernetes --validate=false "
-      command: "kubectl --kubeconfig=./kubeconfig-k3s.yml delete -k ~/projet-fil-rouge/03_kubernetes --validate=false"
+      command: "kubectl --kubeconfig=./kubeconfig-k3s.yml delete -k ~/projet-fil-rouge/03_kubernetes"
 
