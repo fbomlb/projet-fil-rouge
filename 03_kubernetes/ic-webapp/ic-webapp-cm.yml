@@ -11,6 +11,6 @@ data:
   #PGADMIN_URL: http://51.44.164.211:30011
 
   # IP utilisé pour la partie projet 04_ansible
-  ODOO_URL:    http://13.38.227.249:30010
-  PGADMIN_URL: http://13.38.227.249:30011
+  ODOO_URL:    http://35.181.53.192:30010
+  PGADMIN_URL: http://135.181.53.192:30011
   

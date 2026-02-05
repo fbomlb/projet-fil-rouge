@@ -6,6 +6,6 @@ services:
     #image: ulrichsteve/ic-webapp:1.0
     image: ic-webapp:1.0  
     environment:
-      - "ODOO_URL=http://52.47.157.242:8069/"
-      - "PGADMIN_URL=http://52.47.157.242:80"
+      - "ODOO_URL=http://15.237.26.52:8069/"
+      - "PGADMIN_URL=http://15.237.26.52:80"
 
