@@ -12,7 +12,7 @@ pipeline {
         DOCKERHUB_ID = "mlb78180"
         DOCKERHUB_PASSWORD = credentials('dockerhub_password')
         PORT_APP = "8080"
-        PORT_EXT = "8080"
+        PORT_EXT = "8090"
         IP = "172.17.0.1"
     }
     stages {
