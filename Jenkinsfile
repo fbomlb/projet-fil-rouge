@@ -114,7 +114,11 @@ pipeline {
         //     }
         // }
         stage('Check File for docker') {
-            agent { docker { image 'alpine:latest' } }
+            agent { 
+                docker { 
+                    image 'alpine:latest' 
+                } 
+            }
             steps {
                 script {
                     // Vérification que les modifications dans le fichier sont présentes dans ce stage
@@ -199,7 +203,11 @@ pipeline {
             }
         }
         stage('Check File for k3s') {
-            agent { docker { image 'alpine:latest' } }
+            agent { 
+                docker {
+                    image 'alpine:latest' 
+                } 
+            }
             steps {
                 script {
                     // Vérification que les modifications dans le fichier sont présentes dans ce stage
@@ -221,7 +229,7 @@ pipeline {
                     image  'registry.gitlab.com/robconnolly/docker-ansible:latest'
                 }
             }
-            st
+            steps{
                 script {
                     sh '''
                         cat  "04_ansible/host_vars/k3s.yaml"
