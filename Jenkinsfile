@@ -286,6 +286,7 @@ pipeline {
                 }
             }
         }
+    }
 }
 
 // post{
