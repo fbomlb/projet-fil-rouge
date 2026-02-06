@@ -6,7 +6,7 @@ pipeline {
     agent any
     environment {
         DOCKERFILE_NAME = "Dockerfile"
-        DOCKER_DIR = "./01_docker/build.app"
+        DOCKER_DIR = "./01_docker"
         DOCKER_IMAGE = "ic-webapp"
         DOCKER_TAG = "1.0"
         DOCKERHUB_ID = "mlb78180"
@@ -20,7 +20,7 @@ pipeline {
             steps{
                 script {
                     sh '''
-                        docker build --no-cache --network host -f ${DOCKER_DIR}/${DOCKERFILE_NAME} -t ${DOCKERHUB_ID}/${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_DIR}/.
+                        docker build --no-cache --network host -f ${DOCKER_DIR}/build.app/${DOCKERFILE_NAME} -t ${DOCKERHUB_ID}/${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_DIR}/.
                     '''
                 }
             }
@@ -35,7 +35,7 @@ pipeline {
                         docker run --name ${DOCKER_IMAGE} -dp $PORT_EXT:$PORT_APP ${DOCKERHUB_ID}/${DOCKER_IMAGE}:${DOCKER_TAG}
                         sleep 120
                         curl -I http://$IP:$PORT_EXT | grep -i "200"
-                        sleep 120
+                    sleep 120
                     '''
                 }
             }
