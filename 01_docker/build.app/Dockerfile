@@ -5,7 +5,8 @@ LABEL maintainer="FBOMLB78"
 WORKDIR /opt
 RUN apt-get update \
     && apt-get install --no-install-recommends -y git \
-    && git clone https://github.com/eazytraining/projet-fils-rouge.git /opt/ \
+    #&& git clone https://github.com/eazytraining/projet-fils-rouge.git /opt/ \
+    && git clone https://github.com/fbomlb/projet-fil-rouge.git /opt/ \
     && apt-get clean \
     && rm -rf /var/lib/apt/list/* \
     && rm -rf jenkins-tools releases-txt README.md *pdf \
