@@ -5,7 +5,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERFILE_NAME = "Dockerfile"
+        DOCKERFILE_NAME = "build.app/Dockerfile"
         DOCKER_DIR = "./01_docker"
         DOCKER_IMAGE = "ic-webapp"
         DOCKER_TAG = "1.0"
