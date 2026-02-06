@@ -29,13 +29,10 @@ pipeline {
             steps{
                 script {
                     sh '''
-                        sleep 120
                         docker ps -a | grep -i ${DOCKER_IMAGE} && docker rm -f  ${DOCKER_IMAGE}
-                        sleep 120
                         docker run --name ${DOCKER_IMAGE} -dp $PORT_EXT:$PORT_APP ${DOCKERHUB_ID}/${DOCKER_IMAGE}:${DOCKER_TAG}
-                        sleep 120
+                        sleep 60
                         curl -I http://$IP:$PORT_EXT | grep -i "200"
-                    sleep 120
                     '''
                 }
             }
