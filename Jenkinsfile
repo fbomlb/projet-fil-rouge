@@ -278,8 +278,8 @@ pipeline {
                 }
             }
         }
-    }
 }
+
 // post{
 //     always {
 //         script {
