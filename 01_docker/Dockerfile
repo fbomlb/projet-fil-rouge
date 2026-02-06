@@ -11,10 +11,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/list/* \
     && rm -rf jenkins-tools releases-txt README.md *pdf \
     && pip3 install flask
-
+COPY . /opt/
+EXPOSE 8080
 ENV ODOO_URL='https://www.odoo.com/' 
 ENV PGADMIN_URL='https://www.pgadmin.org'
-
-EXPOSE 8080
 ENTRYPOINT ["python", "app.py"]
-
