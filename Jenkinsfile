@@ -82,7 +82,7 @@ pipeline {
                         chmod 400 ~/.aws/credentials
                         cd 02_terraform/
                         terraform init 
-                        terraform apply -var="stack=docker" -auto-approve
+                        terraform apply --var="stack=docker" -auto-approve
                     '''
                 }
             }
