@@ -70,6 +70,8 @@ pipeline {
             agent {
                 docker {
                     image 'jenkins/jnlp-agent-terraform'
+                    // A ajouter pour eviter des plantages
+                    args '--entrypoint=""'
                 }
             }
             steps{
@@ -91,6 +93,7 @@ pipeline {
         //     agent {
         //         docker {
         //             image 'jenkins/jnlp-agent-terraform'
+        //             args '--entrypoint=""'
         //         }
         //     }
         //     environment {
@@ -118,6 +121,8 @@ pipeline {
             agent { 
                 docker { 
                     image 'alpine:latest' 
+                    // A ajouter pour eviter des plantages
+                    args '--entrypoint=""'
                 } 
             }
             steps {
@@ -161,6 +166,8 @@ pipeline {
             agent {
                 docker {
                     image 'jenkins/jnlp-agent-terraform'
+                    // A ajouter pour eviter des plantages
+                    args '--entrypoint=""'
                 }
             }
             environment {
@@ -180,6 +187,8 @@ pipeline {
             agent {
                 docker {
                     image 'jenkins/jnlp-agent-terraform'
+                    // A ajouter pour eviter des plantages
+                    args '--entrypoint=""'
                 }
             }
             environment {
@@ -206,7 +215,9 @@ pipeline {
         stage('Check File for k3s') {
             agent { 
                 docker {
-                    image 'alpine:latest' 
+                    image 'alpine:latest'
+                    // A ajouter pour eviter des plantages
+                    args '--entrypoint=""'
                 } 
             }
             steps {
@@ -228,6 +239,8 @@ pipeline {
             agent {
                 docker {
                     image  'registry.gitlab.com/robconnolly/docker-ansible:latest'
+                    // A ajouter pour eviter des plantages
+                    args '--entrypoint=""'
                 }
             }
             steps{
@@ -272,6 +285,8 @@ pipeline {
             agent {
                 docker {
                     image 'jenkins/jnlp-agent-terraform'
+                    // A ajouter pour eviter des plantages
+                    args '--entrypoint=""'
                 }
             }
             environment {
